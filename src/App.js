@@ -42,7 +42,7 @@ function App() {
   console.log({ url })
   return (
     <div className="App">
-      <Xterm options={xtermOptions} url={'ws://localhost:8080/ws'} id="terminal-container"/>
+      <Xterm options={xtermOptions} url={'ws://localhost:3300/shell'} id="terminal-container"/>
     </div>
   );
 }
