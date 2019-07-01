@@ -51,9 +51,13 @@ export default class Xterm extends Component {
         const { terminal, textDecoder, socket } = this;
         const rawData = event.data // ArrayBuffer;
         const cmd = String.fromCharCode(new Uint8Array(rawData)[0]);
+        console.log('------', { rawData, cmd })
         const data = rawData.slice(1);
-    
+
         switch (cmd) {
+          case '9':
+            this.onSocketOpen()
+            break;
           case Command.OUTPUT:
             try {
               this.sentry.consume(data);
@@ -112,7 +116,7 @@ export default class Xterm extends Component {
         window.term = terminal;
     
         socket.binaryType = 'arraybuffer';
-        socket.onopen = this.onSocketOpen;
+        // socket.onopen = this.onSocketOpen;
         socket.onmessage = this.onSocketData;
         socket.onclose = this.onSocketClose;
     
