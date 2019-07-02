@@ -112,7 +112,7 @@ export default class Xterm extends Component {
         this.socket = new WebSocket(url, ['tty']);
         this.terminal = new Terminal(options);
 
-        const { socket, terminal, container, fitAddon, overlayAddon } = this;
+        const { socket, terminal, container, overlayAddon } = this;
         window.term = terminal;
     
         socket.binaryType = 'arraybuffer';
