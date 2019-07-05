@@ -9,7 +9,7 @@ import Zmodem from 'zmodem.js/src/zmodem_browser'
 
 import OverlayAddon from './overlay';
 
-import 'xterm/dist/xterm.css';
+import './xterm.css';
 
 Terminal.applyAddon(fit)
 
