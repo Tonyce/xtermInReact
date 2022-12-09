@@ -20,7 +20,7 @@
     "@s524797336/m-editor-strong-decorator-plugin": "^1.0.0-beta.14",
     "@s524797336/m-editor-subscript-decorator-plugin": "^1.0.0-beta.14",
     "@s524797336/parse5": "^1.0.2",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-ws": "^4.0.0",
     "immutable": "^4.0.0-rc.12",
     "is-hotkey": "^0.1.4",
